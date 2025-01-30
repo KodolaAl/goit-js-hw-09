@@ -2,8 +2,8 @@ const formData = { email: '', message: '' };
 
 const form = document.querySelector('.feedback-form');
 form.addEventListener('input', event => {
-  const emailValue = event.currentTarget.elements.email.value;
-  const messageValue = event.currentTarget.elements.message.value;
+  const emailValue = event.currentTarget.elements.email.value.trim();
+  const messageValue = event.currentTarget.elements.message.value.trim();
   formData.email = emailValue;
   formData.message = messageValue;
   saveToLS('feedback-form-state', formData);
@@ -31,8 +31,8 @@ initPage();
 
 form.addEventListener('submit', event => {
   event.preventDefault();
-  const emailValue = event.currentTarget.elements.email.value;
-  const messageValue = event.currentTarget.elements.message.value;
+  const emailValue = event.currentTarget.elements.email.value.trim();
+  const messageValue = event.currentTarget.elements.message.value.trim();
   formData.email = emailValue;
   formData.message = messageValue;
   if (!formData.email || !formData.message) {
