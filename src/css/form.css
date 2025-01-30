@@ -1,3 +1,16 @@
+form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 8px;
+  padding: 24px;
+  width: 408px;
+  height: 304px;
+  background: #fff;
+}
+
 label {
   width: 360px;
   min-height: 72px;
@@ -26,6 +39,7 @@ textarea {
 }
 
 button {
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,10 +47,15 @@ button {
   gap: 10px;
 
   border-radius: 8px;
+  border: none;
   padding: 8px 16px;
   width: 95px;
   height: 40px;
 
   background: #4e75ff;
   margin-top: 16px;
+}
+button:hover,
+button:focus {
+  background: #6c8cff;
 }
